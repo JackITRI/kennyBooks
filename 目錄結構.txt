@@ -1,0 +1,22 @@
+book_management_system/
+│
+├── app.py                  # 應用程式工廠 (Factory Pattern) 與啟動入口
+├── config.py               # 專案設定檔 (資料庫路徑、Secret Key)
+├── extensions.py           # 擴充套件初始化 (db, login_manager)
+├── models.py               # SQLAlchemy 資料庫模型 (User, Book)
+├── forms.py                # Flask-WTF 表單定義 (驗證與欄位)
+├── requirements.txt        # 專案依賴套件套件清單
+│
+├── routes/                 # 藍圖 (Blueprints) 路由模組
+│   ├── __init__.py
+│   ├── auth.py             # 使用者認證路由 (登入/註冊/登出)
+│   └── books.py            # 書籍 CRUD 與搜尋路由
+│
+└── templates/              # Jinja2 HTML 範本
+    ├── base.html           # 基礎版型 (包含導覽列與 Flash 訊息)
+    ├── auth/
+    │   ├── login.html      # 登入頁面
+    │   └── register.html   # 註冊頁面
+    └── books/
+        ├── index.html      # 書籍列表與搜尋頁面
+        └── book_form.html  # 新增 / 編輯書籍表單
